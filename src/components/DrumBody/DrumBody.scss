@@ -1,0 +1,76 @@
+.drum-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 500px;
+    padding: 10px;
+    background: hsla(240, 65%, 17%, 0.3);
+    backdrop-filter: 15px;
+    border-radius: 5px;
+}
+
+.left, .right {
+    min-height: 400px;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    background: linear-gradient(to left, hsla(256, 19%, 82%, 0.6), rgb(145, 145, 228));
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.right {
+    padding: 10px;
+    height: 100%;
+    background: linear-gradient(65deg, hsla(256, 19%, 82%, 0.6), rgb(145, 145, 228));
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.song-id {
+    display: flex;
+    background-color: hsla(0, 0%, 0%, 0.15);
+    backdrop-filter: 15px;
+    font-size: 24px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+@for $x from 1 through 9 {
+    .drum-pad:nth-child(#{$x}) {
+        $hue: 45 * $x;
+        $saturation: 10% * $x;
+        background-color: hsl( $hue, $saturation, 55%);
+    }
+}
+
+.drum-pad {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 248, 248);
+    transition: font-size 0.1s ease;
+}
+
+.drum-pad:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.drum-pad:active {
+    outline: 1px solid #fff;
+}
+
+.clip {
+    inset: 0;
+    position: absolute;
+}

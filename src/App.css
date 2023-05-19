@@ -1,0 +1,8 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at left, hsla(245, 100%, 40%, 0.667) 0% 40%, hsl(0, 0%, 100%) 50%, hsl(240, 100%, 83%) 40%);
+}
