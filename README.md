@@ -14,4 +14,4 @@ The live website can be visited [Here](https://davidbayfcc3.netlify.app/).
 
 This is the screenshot of the Desktop view of the App.
 
-![Drum App](/src/screenshot/screenshot.PNG)
+![Drum App](/screenshot.PNG)
